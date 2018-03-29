@@ -8,7 +8,6 @@ export default class App extends Component {
     constructor(props) {
         super(props);
 
-
         this.handleAppStateChange = this.handleAppStateChange.bind(this);
         this.functionOnPress = this.functionOnPress.bind(this);
         this.functionOnPressTwo = this.functionOnPressTwo.bind(this);
@@ -42,6 +41,7 @@ export default class App extends Component {
             });
         }
     }
+    
     functionOnPress() {
         PushNotification.localNotificationSchedule({
             message: 'My Notification Message in '+ this.state.seconds + 'seconds', 
@@ -64,7 +64,7 @@ export default class App extends Component {
         return(
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    Choose some value to start this game...
+                    Choose some value to start it...
                 </Text>
 
                 <Picker
