@@ -8,10 +8,10 @@ import {
     Button
 } from 'react-native';
 
-
 import PushController from './PushController.js';
 import PushNotification  from 'react-native-push-notification';
-import ImageController from './ImageController.js';
+import { Actions } from 'react-native-router-flux';
+import Mask from './Mask.js';
 
 
 export default class App extends Component {
@@ -106,7 +106,11 @@ export default class App extends Component {
                     />
                 </View>
                 <PushController />
-                <ImageController />
+                <Button 
+                    title='Push Gallery!'
+                    onPress={() => console.log(Actions.ImageController())}
+                />
+                <Mask />
             </View>
         );
     }
