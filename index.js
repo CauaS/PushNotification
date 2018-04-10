@@ -1,8 +1,9 @@
 import { AppRegistry } from 'react-native';
-import App from './src/components/App.js';
+import AppOne from './src/AppOne.js';
+
 
 const pushNot = props => {
-    <App />
+    <AppOne />
 }
 
-AppRegistry.registerComponent('pushNot', () => App);
+AppRegistry.registerComponent('pushNot', () => AppOne);
