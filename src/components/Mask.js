@@ -32,25 +32,25 @@ export default class Mask extends Component {
 	render() {
 		// the type is required but options is required only for some specific types.
 		return (
-            <View>
-                <TextInputMask
-                    ref={'myDateText'}
-                    type={'only-numbers'}
-                    
-                    options={{
-                        //format: 'DD-MM-YYYY HH:mm:ss'
-                        //format: 'R$ 0,00'
-                    }}
-                    onChangeText={texto => this.onChangeText(texto)}
-                    value={this.state.valor}
-                />
+		    <View>
+			<TextInputMask
+			    ref={'myDateText'}
+			    type={'only-numbers'}
 
-                <Button
-                    title='Title'
-                    onPress={this.onChangeText}
-                />
-                <Text>{this.state.valor}</Text>
-            </View>
+			    options={{
+				//format: 'DD-MM-YYYY HH:mm:ss'
+				//format: 'R$ 0,00'
+			    }}
+			    onChangeText={texto => this.onChangeText(texto)}
+			    value={this.state.valor}
+			/>
+
+			<Button
+			    title='Title'
+			    onPress={this.onChangeText}
+			/>
+			<Text>{this.state.valor}</Text>
+		    </View>
 		);
 	}
 }
